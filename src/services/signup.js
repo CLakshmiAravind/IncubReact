@@ -25,3 +25,11 @@ export const signin = async(email,password)=>{
             localStorage.setItem('token',response.data)
         })
 }
+
+
+export const createPost = async (email,title,description,costEstimate,category,department)=>{
+    return axios.post('/api/posts',{email,title,costEstimate,description,category,department})
+        .then((response)=>{
+            console.log(response.data);
+        })
+}

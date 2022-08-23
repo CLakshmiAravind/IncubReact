@@ -11,6 +11,9 @@ const Navlinks = ({user}) => {
         {user && <React.Fragment>
           <NavLink className='btn btn-light m-2 ' to='/profile'>{user.name}</NavLink>
           <NavLink className='btn btn-light m-2 ' to='/logout'>Logout</NavLink>
+         {user.email !== 'adminIncubation@rguktn.ac.in' && <NavLink className='btn btn-light m-2 ' to='/posts'>All Posts</NavLink>}
+         {user.email === 'adminIncubation@rguktn.ac.in' && <NavLink className='btn btn-light m-2 ' to='/admin'>All Posts</NavLink>}
+         {!user.qualification && <NavLink className='btn btn-light m-2 ' to='/myposts'>My Posts</NavLink>}
           </React.Fragment>}
         <NavLink className='btn btn-light m-2 ' to='/about'>about</NavLink>
     </nav>

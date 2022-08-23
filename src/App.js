@@ -8,10 +8,14 @@ import Signin from './pages/Users/Signin'
 import Signup from './pages/Users/Signup'
 import Navlinks from './Navlinks';
 import About from './pages/About'
-import Posts from './pages/Posts';
 import Error from './pages/Error';
 import { Component } from 'react';
 import Logout from './pages/Users/Logout';
+import Posts from './pages/posts/Posts';
+import MyPosts from './pages/posts/MyPosts';
+import CreatePost from './pages/posts/CreatePost';
+import Admin from './pages/admin';
+
 
 class App extends Component{
 
@@ -43,8 +47,12 @@ render(){
         <Route path='/signin' element={<Signin/>} />
         <Route path='/logout' element={<Logout/>} />
         <Route path='/signup' element={<Signup/>} />
+        <Route path='/posts' element={<Posts user={this.state.user}/>}/>
+        <Route path='/myposts' element={<MyPosts user={this.state.user}/>}/>
+        <Route path='/new' element={<CreatePost user={this.state.user}/>}/>
+        <Route path='/admin' element={<Admin user={this.state.user}/>}/>
+
         <Route path='/about' element={<About/>} />
-        <Route path='/post' element={<Posts/>} />
         <Route path="*" element={<Error/>}/>
       </Routes>
     </BrowserRouter>
