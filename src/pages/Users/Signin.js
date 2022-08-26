@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { signin } from '../../services/signup'
 // import { useHistory } from 'react-router-dom';
-
+import '../../index.css'
 const Signin = (props) => {
 
   const [email, setEmail] = useState('')
@@ -62,8 +62,9 @@ const Signin = (props) => {
   }
 
   return (
-    <React.Fragment>
-      <div >
+    <React.Fragment >
+      <div className='false'>
+      <div  style={{"marginLeft":"30%"}}>
         <form className='mb-3' style={{ "maxWidth": "500px" }} onSubmit={handleSubmit}>
           <h2 style={{ "textAlign": "center" }}>Student Sign In</h2>
           <div>
@@ -89,6 +90,7 @@ const Signin = (props) => {
             <button className='btn btn-warning'>sign up</button>
           </div>
         </Link>
+      </div>
       </div>
     </React.Fragment>
   )

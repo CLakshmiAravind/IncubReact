@@ -100,7 +100,7 @@ const Signup = () => {
 
   return (
     <React.Fragment>
-      <div >
+      <div style={{"marginLeft":"30%"}}>
       <form className='mb-3' style={{ "maxWidth": "500px" }} onSubmit={handleSubmit}>
         <h2 style={{ "textAlign": "center" }}>Mentor Sign Up</h2>
         <div>

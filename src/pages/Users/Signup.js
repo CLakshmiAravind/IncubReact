@@ -91,7 +91,7 @@ const Signup = () => {
 
   return (
     <React.Fragment>
-      <div >
+      <div style={{"marginLeft":"30%"}}>
         <p style={{"color":"red"}}>please refresh the page if not signing up and not showing any errors  it means user is already there with that email</p>
         <form className='mb-3' style={{ "maxWidth": "500px" }} onSubmit={handleSubmit}>
           <h2 style={{ "textAlign": "center" }}>Student Sign Up</h2>

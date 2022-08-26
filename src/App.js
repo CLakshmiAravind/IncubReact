@@ -15,7 +15,13 @@ import Posts from './pages/posts/Posts';
 import MyPosts from './pages/posts/MyPosts';
 import CreatePost from './pages/posts/CreatePost';
 import Admin from './pages/admin';
-
+import Cse from './pages/department/Cse';
+import Ece from './pages/department/Ece';
+import Mechanical from './pages/department/Mechanical';
+import Civil from './pages/department/Civil';
+import Chemical from './pages/department/Chemical';
+import Mme from './pages/department/Mme';
+import Eee from './pages/department/Eee';
 
 class App extends Component{
 
@@ -41,7 +47,7 @@ render(){
     <BrowserRouter>
    <Navlinks user={this.state.user} />
       <Routes>
-        <Route exact path='/' element={<Home/>} />
+        <Route exact path='/' element={<Home user={this.state.user}/>} />
         <Route path='/msignin' element={<MSignin/>} />
         <Route path='/msignup' element={<MSignup/>} />
         <Route path='/signin' element={<Signin/>} />
@@ -50,8 +56,13 @@ render(){
         <Route path='/posts' element={<Posts user={this.state.user}/>}/>
         <Route path='/myposts' element={<MyPosts user={this.state.user}/>}/>
         <Route path='/new' element={<CreatePost user={this.state.user}/>}/>
-        <Route path='/admin' element={<Admin user={this.state.user}/>}/>
-
+        <Route path='/cse' element={<Cse />}/>
+        <Route path='/ece' element={<Ece/>}/>
+        <Route path='/mech' element={<Mechanical/>}/>
+        <Route path='/civil' element={<Civil/>}/>
+        <Route path='/chemical' element={<Chemical/>}/>
+        <Route path='/mme' element={<Mme/>}/>
+        <Route path='/eee' element={<Eee/>}/>
         <Route path='/about' element={<About/>} />
         <Route path="*" element={<Error/>}/>
       </Routes>

@@ -35,7 +35,7 @@ const MyPosts = ({user}) => {
             <div className='float-child'>
             {posts && posts.map((pos, index) => {
                 if (pos.email === user.email) {
-                    return <div key={posts._id} >
+                    return <div key={posts._id} className='false'>
                         <h1>Title : {pos.title}</h1>
                         <h2>email : {pos.email}</h2>
                         <h2>description : {pos.description}</h2>
