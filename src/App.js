@@ -22,6 +22,7 @@ import Civil from './pages/department/Civil';
 import Chemical from './pages/department/Chemical';
 import Mme from './pages/department/Mme';
 import Eee from './pages/department/Eee';
+import MentorPage from './pages/Mentor/MentorPage';
 
 class App extends Component{
 
@@ -50,6 +51,7 @@ render(){
         <Route exact path='/' element={<Home user={this.state.user}/>} />
         <Route path='/msignin' element={<MSignin/>} />
         <Route path='/msignup' element={<MSignup/>} />
+        <Route path='/mpage' element={<MentorPage/>}/>
         <Route path='/signin' element={<Signin/>} />
         <Route path='/logout' element={<Logout/>} />
         <Route path='/signup' element={<Signup/>} />
@@ -64,6 +66,7 @@ render(){
         <Route path='/mme' element={<Mme/>}/>
         <Route path='/eee' element={<Eee/>}/>
         <Route path='/about' element={<About/>} />
+        <Route path='/admin' element={<Admin/>} />
         <Route path="*" element={<Error/>}/>
       </Routes>
     </BrowserRouter>
