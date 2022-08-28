@@ -107,7 +107,7 @@ const CreatePost = ({user}) => {
         </div>
         <div>
         <label className='form-label'><h4>domain</h4></label>
-        <input className='form-control' type="text" placeholder='about' value={domain} onChange={domainChange} />
+        <input className='form-control' type="text" placeholder='ai,ml...' value={domain} onChange={domainChange} />
         {errors.domain && <div className='alert alert-danger'>{errors.domain}</div>}
         </div>
         <div>
