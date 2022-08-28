@@ -27,8 +27,8 @@ export const signin = async(email,password)=>{
 }
 
 
-export const createPost = async (email,title,description,costEstimate,category,department)=>{
-    return axios.post('/api/posts',{email,title,costEstimate,description,category,department})
+export const createPost = async (email,title,description,costEstimate,category,department,domain)=>{
+    return axios.post('/api/posts',{email,title,costEstimate,description,category,department,domain})
         .then((response)=>{
             console.log(response.data);
         })

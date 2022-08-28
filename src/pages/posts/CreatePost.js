@@ -8,6 +8,7 @@ const CreatePost = ({user}) => {
   const [costEstimate,setCostEstimate] = useState();
   const [category,setCategory] = useState('');
   const [description,setDescription] = useState('');
+  const [domain,setDomain] = useState('');
   const [errors,setErrors] = useState({});
 
 
@@ -23,13 +24,16 @@ const CreatePost = ({user}) => {
       errors.description = 'description is required'
     if(!category)
       errors.category = 'category is required'
+    if(!domain)
+    errors.domain = 'domain is required'
+
     return errors;
   }
 
 
   const doSubmit = async ()=>{
     try {
-      await createPost(user.email,title,description,costEstimate,category,department)
+      await createPost(user.email,title,description,costEstimate,category,department,domain)
       // navigate('/')email
       window.alert('post is added')
       window.location=('/myposts')
@@ -48,7 +52,7 @@ const CreatePost = ({user}) => {
 
     const errors = validate();
     setErrors(errors)
-    if((errors.title || errors.department  || errors.category || errors.costEstimate || errors.department )){
+    if((errors.title || errors.department  || errors.category || errors.costEstimate || errors.department || errors.domain )){
       console.log('crror occured');
     }
     else{
@@ -81,6 +85,11 @@ const CreatePost = ({user}) => {
     setCategory(description)
   }
 
+  const domainChange=e=>{
+    const description  = e.target.value
+    setDomain(description)
+  }
+
   return (
     <React.Fragment>
         <form className='mb-3' style={{ "maxWidth": "500px" }} onSubmit={handleSubmit}>
@@ -95,6 +104,11 @@ const CreatePost = ({user}) => {
         <input className='form-control' type="number" placeholder='cost' value={costEstimate} onChange={costChange}/>
         {errors.costEstimate && <div className='alert alert-danger'>{errors.costEstimate}</div>}
 
+        </div>
+        <div>
+        <label className='form-label'><h4>domain</h4></label>
+        <input className='form-control' type="text" placeholder='about' value={domain} onChange={domainChange} />
+        {errors.domain && <div className='alert alert-danger'>{errors.domain}</div>}
         </div>
         <div>
         <label className='form-label'><h4>description</h4></label>

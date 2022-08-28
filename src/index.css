@@ -60,7 +60,7 @@ code {
 }
 
 .false {
-  background-size: 100% 100%;
+background-size: 100% 100%;
 background-position: 0px 0px;
 background-image: linear-gradient(90deg, #A100FFFF 0%, #71C4FFFF 100%);
 border-radius: 5%;
@@ -76,3 +76,14 @@ word-wrap: break-word;
   padding: 10%;
 }
 
+.false1 {
+  font-family: 'Courier New', monospace;
+  background-size: 100% 100%;
+background-position: 0px 0px;
+background-size: 100% 100%;
+background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+background-image: radial-gradient(49% 81% at 45% 47%, #FFE20345 0%, #073AFF00 100%),radial-gradient(113% 91% at 17% -2%, #00FFB5FF 1%, #FF000000 99%),radial-gradient(142% 91% at 83% 7%, #FFDB00FF 1%, #FF000000 99%),radial-gradient(142% 91% at -6% 74%, #FF0049FF 1%, #FF000000 99%),radial-gradient(142% 91% at 111% 84%, #FF7000FF 0%, #FF0000FF 100%);
+border-radius: 5%;
+padding: 2%;
+word-wrap: break-word;
+}
