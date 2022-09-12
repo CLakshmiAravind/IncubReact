@@ -20,7 +20,7 @@ const Home = ({user}) => {
 
       {!user && <NavLink to='/signup' className='btn btn-warning link' >Get Started</NavLink>}
       <div>
-        {user && <h1 style={{"color":"white"}}>Choose Department</h1>}
+        {user && <h1 style={{"color":"lavender" ,"marginLeft":"40%"}}>Choose Department</h1>}
         <div class="row">
           <div class="col">
         {user && <NavLink to='/cse' className='btn btn-light  ' style={{"fontSize":"36px"}} >CSE</NavLink>}
